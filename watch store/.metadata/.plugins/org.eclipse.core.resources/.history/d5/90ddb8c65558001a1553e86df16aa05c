@@ -1,0 +1,26 @@
+package com.mindtree.watchStore.utility;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import com.mindtree.watchStore.entity.type;
+
+public class JDBCConnection {
+	private static Connection con;
+	public static Connection getConnection()
+	{
+		String url=;
+		String username="root";
+		String pass="Welcome123";
+		Class.forName()
+		con=DriverManager.getConnection(url,username,pass);
+		if(con!=null)
+		{
+			System.out.println("Connection established successfully");
+			
+		}
+		
+	}
+
+}
+type id,in watches

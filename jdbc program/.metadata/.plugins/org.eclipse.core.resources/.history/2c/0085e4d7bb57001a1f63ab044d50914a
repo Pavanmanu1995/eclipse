@@ -1,0 +1,7 @@
+package com.mindtree.booking.service.implementation;
+
+import com.mindtree.booking.service.IBookingService;
+
+public class BookingServiceImpl implements IBookingService {
+
+}

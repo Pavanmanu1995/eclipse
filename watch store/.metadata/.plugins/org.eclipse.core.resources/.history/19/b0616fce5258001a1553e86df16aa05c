@@ -1,0 +1,5 @@
+package com.mindtree.watchStore.utility;
+
+public class JDBCConnection {
+
+}

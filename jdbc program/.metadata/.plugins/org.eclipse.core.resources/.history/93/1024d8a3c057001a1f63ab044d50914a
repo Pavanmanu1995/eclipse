@@ -1,0 +1,33 @@
+package com.mindtree.booking.Dao.implementation;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mindtree.booking.Dao.IBookingDao;
+import com.mindtree.booking.entity.Booking;
+import com.mindtree.booking.utility.JDBCConnection;
+
+public class BookingDaoImpl implements IBookingDao {
+	static PreparedStatement ps=null;
+	static ResultSet rs=null;
+	static Connection con=null;
+	
+
+	@Override
+	public String addBookings(Booking book) {
+		con=JDBCConnection.getConnection();
+		try {
+			ps=con.prepareStatement("insert into booking value(?,?,?,?,?,?,?)");
+			ps.setInt(1,book.getBookingId());
+			ps.setString(2,book.getName());
+			ps.set
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

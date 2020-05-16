@@ -1,0 +1,84 @@
+package assignment4;
+
+import java.util.Scanner;
+
+public class FoodMain {
+	public int intInteger(Scanner sc) {
+		int input = sc.nextInt();
+		return input;
+	}
+
+	public String stringInteger(Scanner sc) {
+		String input = sc.nextLine();
+		return input;
+	}
+
+	public double doubleInteger(Scanner sc) {
+		double input = sc.nextDouble();
+		return input;
+	}
+
+	public Food[] getData(Food[] foodArray,int size,int i,Scanner sc)
+	{
+		System.out.println("enter the food id");
+		int id=intInteger(sc);
+		foodArray[i].setId(id);
+		
+		System.out.println("enter the food name");
+		String name=stringInteger(sc);
+		sc.nextLine();
+		foodArray[i].setName(name);
+		
+		System.out.println("enter the food price");
+		double price=doubleInteger(sc);
+		foodArray[i].setPrice(price);;
+		
+		System.out.println("enter the type of food");
+		String type=stringInteger(sc);
+		sc.nextLine();
+		foodArray[i].setType(type);;
+		
+		return foodArray;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		FoodMain obj=new FoodMain();
+		System.out.println("enter the size of the array");
+		int size=obj.intInteger(sc);
+		Food[] foodArray=new Food[size];
+		int choice=0,i=0;
+		
+		do
+		{
+			System.out.println("1.Add Food");
+			System.out.println("2.Insertion sort based on food price");
+			System.out.println("3.Display all the food");
+			System.out.println("4.Binary search based on food id");
+			System.out.println("5.exit");
+			System.out.println("enter your choice");
+			choice=obj.intInteger(sc);
+			switch(choice)
+			{
+			case 1:
+				foodArray[i]=new Food();
+				foodArray=obj.getData(foodArray,size,i,sc);
+				i++;
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+				
+			}
+			
+		}
+		while(choice!=5);
+
+	}
+
+}

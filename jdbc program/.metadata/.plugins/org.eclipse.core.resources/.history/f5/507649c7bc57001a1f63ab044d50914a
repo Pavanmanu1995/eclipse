@@ -1,0 +1,12 @@
+package com.mindtree.booking.service;
+
+import com.mindtree.booking.entity.Booking;
+import com.mindtree.booking.exception.BookingServiceException;
+import com.mindtree.booking.exception.InvalidAgeException;
+
+public interface IBookingService {
+	public boolean validateAge(int age) throws InvalidAgeException;
+
+	public int amountCalculation(float price);
+
+}

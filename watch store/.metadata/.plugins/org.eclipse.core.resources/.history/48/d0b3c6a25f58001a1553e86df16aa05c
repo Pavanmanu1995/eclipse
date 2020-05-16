@@ -1,0 +1,55 @@
+package com.mindtree.watchStore.dao.implementation;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mindtree.watchStore.dao.IWatchStoreDao;
+import com.mindtree.watchStore.entity.Type;
+import com.mindtree.watchStore.entity.Watch;
+import com.mindtree.watchStore.exception.WatchStoreDaoException;
+import com.mindtree.watchStore.exception.WatchStoreServiceException;
+import com.mindtree.watchStore.service.IWatchStoreService;
+import com.mindtree.watchStore.utility.JDBCConnection;
+
+public class WatchStoreDaoImpl implements IWatchStoreDao {
+	static PreparedStatement ps=null;
+	static ResultSet rs=null;
+	static Connection con=null;
+	
+	@Override
+	public String addType(Type type) throws WatchStoreDaoException {
+		con=JDBCConnection.getConnection();
+			try {
+				ps=con.prepareStatement("insert into type values(?,?)");
+				ps.setInt(1,type.getTypeId());
+				ps.setString(2,type.getTypeName());
+				ps.execute();
+				con.close();
+			} catch (SQLException e) {
+				throw new WatchStoreDaoException();
+			}
+			
+		return "type details added successfully";
+	}
+
+	@Override
+	public String addWatch(Watch watch) throws WatchStoreDaoException {
+		con=JDBCConnection.getConnection();
+		try {
+			ps=con.prepareStatement("insert into watch values(?,?,?,?)");
+			ps.setInt(1,watch.getWatchId());
+			ps.setInt(2,watch.getTypeId());
+			ps.setString(3,watch.getModelNumber());
+			ps.setDouble(4,watch.getPrice());
+			ps.execute();
+			con.close();
+		} catch (SQLException e) {
+			throw new WatchStoreDaoException();
+		}
+		return "type details added successfully";
+	}
+
+
+}

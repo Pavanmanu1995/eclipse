@@ -1,0 +1,5 @@
+package com.mindtree.booking.service;
+
+public interface IBookingService {
+
+}

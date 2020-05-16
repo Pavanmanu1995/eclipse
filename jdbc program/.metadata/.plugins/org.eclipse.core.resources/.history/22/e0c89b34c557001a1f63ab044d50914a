@@ -1,0 +1,11 @@
+package com.mindtree.booking.Dao;
+
+import com.mindtree.booking.entity.Booking;
+import com.mindtree.booking.exception.BookingDaoException;
+
+public interface IBookingDao {
+
+	public String addBookings(Booking book) throws BookingDaoException;
+	
+
+}

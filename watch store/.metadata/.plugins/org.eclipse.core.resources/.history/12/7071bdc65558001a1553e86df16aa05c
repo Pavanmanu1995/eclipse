@@ -1,0 +1,7 @@
+package com.mindtree.watchStore.service.implementation;
+
+import com.mindtree.watchStore.service.IWatchStoreService;
+
+public class WatchStoreServiceImpl implements IWatchStoreService {
+
+}

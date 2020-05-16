@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;doctorandpatient/src/com/mindtree/doctorandpatient/dao/daoImpl&apos; to &apos;implementation&apos;" description="Rename resource &apos;daoImpl&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/mindtree/doctorandpatient/dao/daoImpl" name="implementation" stamp="1582451568519" updateReferences="true"/>
+</session>

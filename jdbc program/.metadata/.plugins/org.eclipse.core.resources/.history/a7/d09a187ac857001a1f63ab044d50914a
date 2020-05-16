@@ -1,0 +1,67 @@
+package com.mindtree.booking.utility;
+
+public class d {
+
+	public d() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
+List<String> sourceCounter = new ArrayList<>();
+List<String> destinationCounter = new ArrayList<>();
+try {
+	con=JDBCConnection.getConnection();
+
+	ps = con.prepareStatement("select * from train where source=?");
+	ps.setString(1, source);
+	rs = ps.executeQuery();
+
+	while (rs.next()) {
+		String temp = rs.getString(3);
+		sourceCounter.add(temp);
+	}
+	if (sourceCounter.contains(source) == false) {
+		throw new NoSuchSourceException("Source not found");
+	}
+
+	rs.close();
+	ps.close();
+
+	ps = con.prepareStatement("select * from train where destination=?");
+	ps.setString(1, destination);
+	rs = ps.executeQuery();
+
+	while (rs.next()) {
+		String temp = rs.getString(4);
+
+		destinationCounter.add(temp);
+
+	}
+	if (destinationCounter.contains(destination) == false) {
+		throw new NoSuchDestinationException("Destination not found");
+	}
+
+	rs.close();
+	ps.close();
+
+	ps = con.prepareStatement("select * from train where source=? and destination=?");
+	ps.setString(1, source);
+	ps.setString(2, destination);
+	rs = ps.executeQuery();
+	while (rs.next()) {
+		int id = rs.getInt(1);
+		String name = rs.getString(2);
+		String source1 = rs.getString(3);
+		String destination1 = rs.getString(4);
+		float distance = rs.getFloat(5);
+		Train train = new Train(id, name, source1, destination1, distance);
+		list.add(train);
+
+	}
+	rs.close();
+	ps.close();
+	con.close();
+} catch (SQLException | NoSuchSourceException | NoSuchDestinationException e) {
+	throw new UserTrainServiceException(e.getMessage(), e);
+}
+return list;

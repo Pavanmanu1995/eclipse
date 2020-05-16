@@ -1,0 +1,5 @@
+package com.mindtree.watchStore.entity;
+
+public class Type {
+
+}

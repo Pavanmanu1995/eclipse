@@ -1,0 +1,33 @@
+package com.mindtree.booking.service.implementation;
+
+import com.mindtree.booking.Dao.IBookingDao;
+import com.mindtree.booking.Dao.implementation.BookingDaoImpl;
+import com.mindtree.booking.entity.Booking;
+import com.mindtree.booking.exception.BookingServiceException;
+import com.mindtree.booking.exception.InvalidAgeException;
+import com.mindtree.booking.service.IBookingService;
+
+public class BookingServiceImpl implements IBookingService {
+
+	@Override
+	public boolean validateAge(int age) throws InvalidAgeException {
+		try {
+			if(age>18)
+			{
+				return true;
+			}
+			
+		} catch (Exception e) {
+			throw new InvalidAgeException();
+		}
+		
+		return false;
+	}
+
+	@Override
+	public int amountCalculation(float price) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

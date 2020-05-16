@@ -1,0 +1,16 @@
+package com.mindtree.watchStore.service.implementation;
+
+import com.mindtree.watchStore.entity.Type;
+import com.mindtree.watchStore.exception.WatchStoreServiceException;
+import com.mindtree.watchStore.service.IWatchStoreService;
+
+public class WatchStoreServiceImpl implements IWatchStoreService {
+	IWatchStoreDao
+
+	@Override
+	public String addType(Type type) throws WatchStoreServiceException {
+		
+		return null;
+	}
+
+}

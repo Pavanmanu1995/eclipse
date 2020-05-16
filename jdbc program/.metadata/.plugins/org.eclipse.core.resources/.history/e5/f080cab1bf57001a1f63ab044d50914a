@@ -1,0 +1,7 @@
+package com.mindtree.booking.Dao.implementation;
+
+import com.mindtree.booking.Dao.IBookingDao;
+
+public class BookingDaoImpl implements IBookingDao {
+
+}

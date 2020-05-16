@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.service.implementation.BookingServiceImpl"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.service.IBookingService"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.entity.Booking"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.Dao.implementation.BookingDaoImpl"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.Dao.IBookingDao"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.exception.InvalidAgeException"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.utility.JDBCConnection"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.exception.BookingDaoException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.exception.BookingServiceException"/>
+<fullyQualifiedTypeName name="com.mindtree.booking.exception.BookingAppException"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,10 @@
+package com.mindtree.watchStore.service;
+
+import com.mindtree.watchStore.entity.Type;
+import com.mindtree.watchStore.exception.WatchStoreServiceException;
+
+public interface IWatchStoreService {
+
+	public String addType(Type type) throws WatchStoreServiceException;
+
+}

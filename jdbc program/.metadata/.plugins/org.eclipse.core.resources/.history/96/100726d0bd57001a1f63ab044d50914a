@@ -1,0 +1,5 @@
+package com.mindtree.booking.Dao;
+
+public interface IBookingDao {
+
+}

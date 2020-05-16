@@ -1,0 +1,28 @@
+package basecamp1;
+import java.util.Scanner;
+public class Q2 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int menu=4;
+		int arr[]=new int[10];
+		
+		switch (menu)
+		{
+		case 1:
+			System.out.println("enter the marks");
+			for(int i=0;i<=10;i++)
+			{
+				arr[i]=sc.nextInt();
+				System.out.println("the entered marks are"+arr[i]);
+			}
+			break;
+		case 2:
+			
+		
+		}
+	
+
+	}
+
+}

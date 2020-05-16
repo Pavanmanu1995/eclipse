@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;railwayticketbookingsystem/src/com/mindtree/railwayticketbookingsystem/exception/UserAlreadyPresent.java&apos; to &apos;UserAlreadyPresentException.java&apos;" description="Rename resource &apos;UserAlreadyPresent.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/mindtree/railwayticketbookingsystem/exception/UserAlreadyPresent.java" name="UserAlreadyPresentException.java" stamp="1582470647508" updateReferences="true"/>
+</session>

@@ -1,0 +1,70 @@
+package readAndWrite;
+
+import java.io.FileInputStream;
+
+public class ReadAndWrite {
+	
+		public static void main(String []args) {
+	//   List<Entity> entity = new ArrayList<Entity>();
+	//   entity.add(new Entity(101,"pavan",24000));
+	//   entity.add(new Entity(102,"balveen",24000));
+	//   entity.add(new Entity(103,"suresh",24000));
+	//   
+	//   XSSFWorkbook workbook = new XSSFWorkbook();
+	//   XSSFSheet sheet = workbook.createSheet("employee details");
+	//   int rownum=0;
+	//   for( Entity e:entity) {
+//		   Row row = sheet.createRow(rownum++);
+//		   Cell cell1 = row.createCell(0);
+//		   cell1.setCellValue(e.getEmployeeId());
+//		   Cell cell2 = row.createCell(1);
+//		   cell2.setCellValue(e.getEmployeeName());
+//		   Cell cell3 = row.createCell(2);
+//		   cell3.setCellValue(e.getEmployeesalary());
+	//   }
+	//   File file = new File("D:/excelsheet/employee.xlsx");
+	//   try {
+//		FileOutputStream fos = new FileOutputStream(file);
+//		workbook.write(fos);
+	//	
+//		fos.close();
+//		workbook.close();
+	//} catch (IOException e) {
+//		// TODO Auto-generated catch block
+//		System.out.println(e.getMessage());
+	//}
+			try {
+				FileInputStream fis = new FileInputStream("D:/excelsheet/employee.xlsx");
+				XSSFWorkbook workbook = new XSSFWorkbook(fis);
+				XSSFSheet sheet = workbook.getSheet("mind details");
+				Iterator<Row> rowiter = sheet.iterator();
+				while(rowiter.hasNext()) {
+					Row rownext =rowiter.next(); 
+					Iterator<Cell> celliterator = rownext.iterator();
+					while(celliterator.hasNext()) {
+						Cell cell = celliterator.next();
+						switch(cell.getCellType()) {
+						case Cell.CELL_TYPE_NUMERIC:
+							System.out.println(cell.getNumericCellValue());
+						break;
+						case Cell.CELL_TYPE_STRING:
+							System.out.println(cell.getStringCellValue());
+							break;
+						}
+						System.out.println();
+					}
+					
+				}
+				workbook.close();
+				fis.close();
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			}
+			
+		}
+	}
+
+
+}

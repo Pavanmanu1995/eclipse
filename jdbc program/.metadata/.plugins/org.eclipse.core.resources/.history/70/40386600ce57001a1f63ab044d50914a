@@ -1,0 +1,21 @@
+package com.mindtree.booking.utility;
+
+public class b {
+
+	public b() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
+List<Employee> empList = new ArrayList<>();
+con = DBConnection.getConnection();
+try {
+	ps = con.prepareStatement("select * from employee");
+	rs = ps.executeQuery();
+	while (rs.next()) {
+		empList.add(new Employee(rs.getInt(1), rs.getString(2), rs.getDouble(3)));
+	}
+	return empList;
+} catch (SQLException e) {
+	throw new EmployeeDaoException();
+}

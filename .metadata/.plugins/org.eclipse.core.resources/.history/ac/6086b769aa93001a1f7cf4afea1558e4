@@ -1,0 +1,21 @@
+package collection;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class collections {
+	
+	public static void main(String args[])
+	{
+		HashSet<Employee> set = new HashSet<Employee>();
+		Employee emp = new Employee("pavan",100);
+		set.add(emp);
+		System.out.println(set.toString());
+		
+		
+		
+
+		
+		
+	}
+}

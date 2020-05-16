@@ -1,0 +1,37 @@
+package com.mindtree.watchStore.service.implementation;
+
+import com.mindtree.watchStore.dao.IWatchStoreDao;
+import com.mindtree.watchStore.dao.implementation.WatchStoreDaoImpl;
+import com.mindtree.watchStore.entity.Type;
+import com.mindtree.watchStore.entity.Watch;
+import com.mindtree.watchStore.exception.WatchStoreDaoException;
+import com.mindtree.watchStore.exception.WatchStoreServiceException;
+import com.mindtree.watchStore.service.IWatchStoreService;
+
+public class WatchStoreServiceImpl implements IWatchStoreService {
+	IWatchStoreDao dao=new WatchStoreDaoImpl();
+
+	@Override
+	public String addType(Type type) throws WatchStoreServiceException {
+		
+		try {
+			String mess = dao.addType(type);
+			return mess;
+		} catch (WatchStoreDaoException e) {
+			throw new  WatchStoreServiceException();
+		}
+		
+	
+	}
+
+	@Override
+	public String addWatch(Watch watch) throws WatchStoreServiceException {
+		try {
+			String mess = dao.addWatch(watch);
+			return mess;
+		} catch (WatchStoreDaoException e) {
+			throw new  WatchStoreServiceException();
+		}
+	}
+
+}
